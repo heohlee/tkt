@@ -19,7 +19,7 @@ import (
 	sqlite "modernc.org/sqlite"
 	sqlite3 "modernc.org/sqlite/lib"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // pragmaDSNHead and pragmaDSNTail bracket the one token that may differ

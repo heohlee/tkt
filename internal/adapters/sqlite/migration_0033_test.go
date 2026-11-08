@@ -10,7 +10,7 @@ import (
 	"testing/fstest"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Migration 0033 tests (canned replies, ticket followers and the mention /

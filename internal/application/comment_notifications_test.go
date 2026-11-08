@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Issue #344 slice B3: the two S10 COMMENT rows, plus S16 (a requester never

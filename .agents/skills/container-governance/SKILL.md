@@ -3,7 +3,7 @@ name: container-governance
 description: "Trigger: Dockerfile, docker-compose, container image, healthcheck, data volume, or image publishing work. Govern the container contract as a deliberate set and prove alignment with the machine check in internal/container."
 license: MIT
 metadata:
-  author: "giulianotesta7"
+  author: "heohlee"
   version: "1.1"
 ---
 

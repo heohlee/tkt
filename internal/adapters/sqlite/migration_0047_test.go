@@ -7,7 +7,7 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 func TestMigration0047RemovesOnlyDeskSuggestions(t *testing.T) {

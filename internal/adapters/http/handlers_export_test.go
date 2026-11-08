@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // The CSV downloads (issue #409, specs S20-S27). These cases go through the

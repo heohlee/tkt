@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Task 4.4: session store — create, lookup with expiry enforcement + lazy

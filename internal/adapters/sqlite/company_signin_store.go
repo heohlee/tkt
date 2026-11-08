@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // The settings rows of the company sign-in configuration (issue #419). No

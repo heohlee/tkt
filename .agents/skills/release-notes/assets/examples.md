@@ -20,7 +20,7 @@ Body:
 
 **Full changelog:** `v0.1.0...v0.1.1`
 
-[Documentation](https://github.com/giulianotesta7/tkt#documentation) | [Español](https://github.com/giulianotesta7/tkt/blob/main/README.es.md)
+[Documentation](https://github.com/heohlee/tkt#documentation) | [Español](https://github.com/heohlee/tkt/blob/main/README.es.md)
 ```
 
 ## Features and fixes
@@ -42,7 +42,7 @@ Body:
 
 **Full changelog:** `v0.1.0...v0.2.0`
 
-[Documentation](https://github.com/giulianotesta7/tkt#documentation) | [Español](https://github.com/giulianotesta7/tkt/blob/main/README.es.md)
+[Documentation](https://github.com/heohlee/tkt#documentation) | [Español](https://github.com/heohlee/tkt/blob/main/README.es.md)
 ```
 
 For a first release, introduce verified product capabilities and include Getting started.

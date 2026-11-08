@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Issue #489, S3: every API error is an RFC 9457 problem with a stable type,

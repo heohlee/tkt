@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // categorySuggestionIndex ranks categories for the local suggestion engine

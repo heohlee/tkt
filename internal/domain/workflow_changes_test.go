@@ -3,7 +3,7 @@ package domain_test
 import (
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // TestWorkflow_CountChanges pins the unit the category badge reports, because the

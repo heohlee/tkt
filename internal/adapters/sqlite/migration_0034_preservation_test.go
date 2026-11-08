@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // TestMigration0034PreservesEveryExistingObjectAndRow proves every existing row

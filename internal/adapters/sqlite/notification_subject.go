@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // notificationSubjectStore implements application.NotificationSubjectStore

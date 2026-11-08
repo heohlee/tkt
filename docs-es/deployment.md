@@ -24,7 +24,7 @@ mismos valores por defecto:
 No hay shell ni gestor de paquetes dentro: inspeccioná el contenedor en lugar de ejecutar
 comandos en él.
 
-Tags: un tag `vX.Y.Z` publica `ghcr.io/giulianotesta7/tkt` con la versión completa, la versión
+Tags: un tag `vX.Y.Z` publica `ghcr.io/heohlee/tkt` con la versión completa, la versión
 menor y `latest`. Nada se publica desde la rama main, así que `latest` solo avanza con una
 versión. La instalación recomendada usa la imagen publicada.
 
@@ -41,7 +41,7 @@ docker build --build-arg VERSION=dev --build-arg REVISION="$(git rev-parse HEAD)
 
 Un `go build ./cmd/server` normal usa la revisión VCS que Go incorpora si no se inyecta una
 versión. Para un binario publicado, pasa
-`-ldflags="-X github.com/giulianotesta7/tkt/internal/version.Release=v1.2.3"`.
+`-ldflags="-X github.com/heohlee/tkt/internal/version.Release=v1.2.3"`.
 Un archivo fuente sin versión ni metadatos VCS muestra `dev`.
 
 ## Ejecutarla
@@ -55,7 +55,7 @@ docker compose up -d --no-build
 
 Publica `8080` en el host, monta el volumen de Compose `tkt-data` en `/data` y deja la política
 de reinicio en `unless-stopped`. La imagen es
-`ghcr.io/giulianotesta7/tkt:${TKT_TAG:-latest}`: definí `TKT_TAG` para fijar una versión. Con el
+`ghcr.io/heohlee/tkt:${TKT_TAG:-latest}`: definí `TKT_TAG` para fijar una versión. Con el
 nombre de proyecto predeterminado `tkt`,
 Docker llama al volumen `tkt_tkt-data`; el ejemplo con `docker run` de abajo crea otro volumen
 llamado `tkt-data`.
@@ -74,13 +74,13 @@ docker compose up -d --build --pull never
 
 ```console
 docker volume create tkt-data
-docker pull ghcr.io/giulianotesta7/tkt:latest
+docker pull ghcr.io/heohlee/tkt:latest
 docker run -d \
   --name tkt \
   --restart unless-stopped \
   -p 127.0.0.1:8080:8080 \
   -v tkt-data:/data \
-  ghcr.io/giulianotesta7/tkt:latest
+  ghcr.io/heohlee/tkt:latest
 ```
 
 ## Comprobar que corre

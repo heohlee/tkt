@@ -10,7 +10,7 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Migration 0023 tests (notification kind on_hold — issue #352): 0021 pins the

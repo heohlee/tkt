@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/version"
+	"github.com/heohlee/tkt/internal/version"
 )
 
 func TestInstanceAboutShowsRunningReleaseReadOnly(t *testing.T) {

@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 const (

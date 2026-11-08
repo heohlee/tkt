@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Migration 0042 (issue #493): OAuth clients, grants, codes and tokens for MCP

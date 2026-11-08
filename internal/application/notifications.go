@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Notification recipients (issue #344, spec S10). The policy lives HERE, in the

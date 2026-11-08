@@ -8,7 +8,7 @@ import (
 	"testing/fstest"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // TestMigration0010 proves the audit_events.closure_via column contract (issue

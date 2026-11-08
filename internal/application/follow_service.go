@@ -5,7 +5,7 @@ import (
 	"errors"
 	"sort"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // ErrMsgFollowersStaffOnly refuses a follow operation to a requester. Following

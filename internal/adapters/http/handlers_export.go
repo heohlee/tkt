@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 // CSV export (issue #409). Two downloads, each from the screen that already

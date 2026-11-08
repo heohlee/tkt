@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Agent queue row-context read model (issue #122): one batched, bounded query

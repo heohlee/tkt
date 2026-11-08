@@ -3,7 +3,7 @@ name: worktree-isolation
 description: "Trigger: starting any change in the tkt repository. Create a new git worktree under ../tkt-worktrees instead of working in the main checkout, so several changes can run in parallel."
 license: MIT
 metadata:
-  author: "giulianotesta7"
+  author: "heohlee"
   version: "2.0"
 ---
 

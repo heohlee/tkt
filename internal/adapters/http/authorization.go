@@ -3,7 +3,7 @@ package httpadapter
 import (
 	"net/http"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // requireCapability rejects before a handler queries, mutates, or renders

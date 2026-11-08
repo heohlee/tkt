@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // New-password minimum on the existing routes (issue #414, T1/S4/S6/S10). The

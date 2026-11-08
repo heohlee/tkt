@@ -13,8 +13,8 @@ import (
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // MCP (issue #493, S7-S9): /mcp is a stateless Streamable HTTP endpoint whose

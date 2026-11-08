@@ -19,8 +19,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/adapters/oidc"
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/adapters/oidc"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // OpenID Connect client (issue #419): the adapter runs on

@@ -9,8 +9,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 // Company sign-in (issue #419, S11): the public routes that start a provider

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // PR9 task 9.2 TRIANGULATE — forged + stale + XSS edge on the 9.1 GREEN

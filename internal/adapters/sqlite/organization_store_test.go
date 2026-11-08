@@ -6,7 +6,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // The organization identity store (issue #383, S3): the three text facts live

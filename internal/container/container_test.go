@@ -550,7 +550,7 @@ func TestParseDockerfileRejectsIncomplete(t *testing.T) {
 func composeBody(service string) []byte {
 	return []byte(`services:
   app:
-    image: ghcr.io/giulianotesta7/tkt:${TKT_TAG:-latest}
+    image: ghcr.io/heohlee/tkt:${TKT_TAG:-latest}
 ` + service)
 }
 
@@ -594,7 +594,7 @@ func TestParseComposeReadsListFormEnvironment(t *testing.T) {
 func TestParseComposeUnquotesScalarValues(t *testing.T) {
 	body := []byte(`services:
   app:
-    image: "ghcr.io/giulianotesta7/tkt:${TKT_TAG:-latest}"
+    image: "ghcr.io/heohlee/tkt:${TKT_TAG:-latest}"
     build:
       context: '.'
       dockerfile: "Dockerfile"
@@ -610,7 +610,7 @@ func TestParseComposeUnquotesScalarValues(t *testing.T) {
 	if err != nil {
 		t.Fatalf("parse: %v", err)
 	}
-	if c.ImageRepo != "ghcr.io/giulianotesta7/tkt" || c.ImageTag != "${TKT_TAG:-latest}" {
+	if c.ImageRepo != "ghcr.io/heohlee/tkt" || c.ImageTag != "${TKT_TAG:-latest}" {
 		t.Errorf("quoted image kept its quotes: %q:%q", c.ImageRepo, c.ImageTag)
 	}
 	if c.BuildContext != "." || c.BuildDockerfile != "Dockerfile" {
@@ -761,7 +761,7 @@ func TestParseComposeRejectsHealthcheckSubKeys(t *testing.T) {
 func TestParseComposeRejectsUnreadableValues(t *testing.T) {
 	body := []byte(`services:
   app:
-    image: ghcr.io/giulianotesta7/tkt:${TKT_TAG:-latest}
+    image: ghcr.io/heohlee/tkt:${TKT_TAG:-latest}
     ports:
       - "8080:8080"
     volumes:
@@ -780,7 +780,7 @@ func TestParseComposeRejectsUnreadableValues(t *testing.T) {
 func TestParseComposeRejectsSecondService(t *testing.T) {
 	body := []byte(`services:
   app:
-    image: ghcr.io/giulianotesta7/tkt:${TKT_TAG:-latest}
+    image: ghcr.io/heohlee/tkt:${TKT_TAG:-latest}
     ports:
       - "8080:8080"
     volumes:

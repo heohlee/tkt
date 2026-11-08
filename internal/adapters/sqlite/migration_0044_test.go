@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Migration 0044 tests (catalog folders — issue #484, S8): the category

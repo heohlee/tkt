@@ -2,7 +2,7 @@ package httpadapter
 
 import (
 	"fmt"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 	"testing"
 )
 

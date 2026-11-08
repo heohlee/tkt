@@ -8,7 +8,7 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Migration 0030 tests (what changed since the last visit — issue #415): one

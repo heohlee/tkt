@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Issue #344 comment regressions through the real HTTP routes, comment service,

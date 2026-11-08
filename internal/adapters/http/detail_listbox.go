@@ -3,8 +3,8 @@ package httpadapter
 import (
 	"strconv"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 // The ticket detail's property pickers (issue #386, S5). The maintainer chose

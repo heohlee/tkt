@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // newFolderTestStore is a fully migrated store with an empty folder tree: the

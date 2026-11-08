@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Issue #438 (S2, S3, S5): the activity feed is one card per comment with a

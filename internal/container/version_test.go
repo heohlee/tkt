@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/version"
+	"github.com/heohlee/tkt/internal/version"
 )
 
 func TestInstanceVersionResolution(t *testing.T) {
@@ -61,8 +61,8 @@ func TestInstanceVersionBuildContract(t *testing.T) {
 		}
 	}
 	for _, flag := range []string{
-		"-X github.com/giulianotesta7/tkt/internal/version.Release=$VERSION",
-		"-X github.com/giulianotesta7/tkt/internal/version.Revision=$REVISION",
+		"-X github.com/heohlee/tkt/internal/version.Release=$VERSION",
+		"-X github.com/heohlee/tkt/internal/version.Revision=$REVISION",
 	} {
 		if !strings.Contains(command, flag) {
 			t.Errorf("server build missing %q", flag)

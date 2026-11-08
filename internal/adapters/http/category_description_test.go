@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 func TestCatalogCategoryDescriptionCanBeBlankOnCreateAndEdit(t *testing.T) {

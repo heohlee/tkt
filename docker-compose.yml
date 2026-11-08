@@ -4,7 +4,7 @@ services:
   app:
     # The image name doubles as the local build target: a plain `up` builds it
     # when missing and `pull` fetches the published one under the same tag.
-    image: ghcr.io/giulianotesta7/tkt:${TKT_TAG:-latest}
+    image: ghcr.io/heohlee/tkt:${TKT_TAG:-latest}
     build: .
     # The image owns the environment defaults and the healthcheck; compose
     # deliberately does not restate them. This file holds only what compose

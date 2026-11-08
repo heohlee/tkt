@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // Category suggestion settings row keys (issue #416). No migration seeds them:

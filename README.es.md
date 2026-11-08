@@ -11,10 +11,10 @@ Una plataforma de gestión de help desk autoalojada.
 
 [English](README.md) | **Español**
 
-[![Go quality](https://github.com/giulianotesta7/tkt/actions/workflows/quality.yml/badge.svg)](https://github.com/giulianotesta7/tkt/actions/workflows/quality.yml)
-[![E2E](https://github.com/giulianotesta7/tkt/actions/workflows/e2e.yml/badge.svg)](https://github.com/giulianotesta7/tkt/actions/workflows/e2e.yml)
-[![Container](https://github.com/giulianotesta7/tkt/actions/workflows/container.yml/badge.svg)](https://github.com/giulianotesta7/tkt/actions/workflows/container.yml)
-[![Go security](https://github.com/giulianotesta7/tkt/actions/workflows/security.yml/badge.svg)](https://github.com/giulianotesta7/tkt/actions/workflows/security.yml)
+[![Go quality](https://github.com/heohlee/tkt/actions/workflows/quality.yml/badge.svg)](https://github.com/heohlee/tkt/actions/workflows/quality.yml)
+[![E2E](https://github.com/heohlee/tkt/actions/workflows/e2e.yml/badge.svg)](https://github.com/heohlee/tkt/actions/workflows/e2e.yml)
+[![Container](https://github.com/heohlee/tkt/actions/workflows/container.yml/badge.svg)](https://github.com/heohlee/tkt/actions/workflows/container.yml)
+[![Go security](https://github.com/heohlee/tkt/actions/workflows/security.yml/badge.svg)](https://github.com/heohlee/tkt/actions/workflows/security.yml)
 
 </div>
 
@@ -69,7 +69,7 @@ Mediciones locales, no garantías de rendimiento.
 ### Docker Compose (recomendado)
 
 ```console
-git clone https://github.com/giulianotesta7/tkt.git
+git clone https://github.com/heohlee/tkt.git
 cd tkt
 docker compose pull
 docker compose up -d --no-build
@@ -81,7 +81,7 @@ compilar desde este checkout, ejecutá `docker compose up -d --build --pull neve
 ### Compilar desde el código fuente
 
 ```console
-git clone https://github.com/giulianotesta7/tkt.git
+git clone https://github.com/heohlee/tkt.git
 cd tkt
 mkdir -p data bin
 CGO_ENABLED=0 go build -o bin/tkt ./cmd/server

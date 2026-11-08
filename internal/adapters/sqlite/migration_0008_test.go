@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // TestMigration0008 proves the audit_events.step_index column contract (PR10

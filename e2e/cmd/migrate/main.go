@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/giulianotesta7/tkt/internal/adapters/sqlite"
+	"github.com/heohlee/tkt/internal/adapters/sqlite"
 )
 
 func main() {

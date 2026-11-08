@@ -6,8 +6,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // The sign-in panel's settings rows (issue #383, S9/S10). Every text fact is one

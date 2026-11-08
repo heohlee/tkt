@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // CompanySignInService implements the company sign-in flow (issue #419): an

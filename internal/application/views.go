@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // TicketView is the detail-page view model (D13): the store ports return

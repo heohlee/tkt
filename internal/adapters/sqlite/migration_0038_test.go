@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 func TestMigration0038Shape(t *testing.T) {

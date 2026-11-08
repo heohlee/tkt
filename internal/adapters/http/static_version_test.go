@@ -9,7 +9,7 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/giulianotesta7/tkt/web/templates"
+	"github.com/heohlee/tkt/web/templates"
 )
 
 // Issue #436: every embedded asset is linked at a content-versioned URL, so an

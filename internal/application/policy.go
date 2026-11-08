@@ -3,7 +3,7 @@ package application
 import (
 	"context"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Authorization failure messages for application-layer identity and

@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // id formats an id for a URL, which every catalog assertion needs.

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Attachment validation (issue #366, S1/S5): at most 5 files per submission,

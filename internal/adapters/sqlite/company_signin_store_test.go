@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // Company sign-in configuration (issue #419): keyed settings rows, so no

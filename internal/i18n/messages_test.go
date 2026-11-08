@@ -704,7 +704,7 @@ func TestUserVisibleValidationErrorsCarryACatalogueKey(t *testing.T) {
 // without a catalogue key cannot slip past the allowlist.
 func TestKeylessValidationErrorGuardFailsOnANewLiteral(t *testing.T) {
 	dir := t.TempDir()
-	source := "package newerr\n\nimport \"github.com/giulianotesta7/tkt/internal/domain\"\n\nfunc f() error {\n\treturn &domain.ValidationError{Field: \"title\", Message: \"a brand new user-visible refusal\"}\n}\n"
+	source := "package newerr\n\nimport \"github.com/heohlee/tkt/internal/domain\"\n\nfunc f() error {\n\treturn &domain.ValidationError{Field: \"title\", Message: \"a brand new user-visible refusal\"}\n}\n"
 	if err := os.WriteFile(filepath.Join(dir, "newerr.go"), []byte(source), 0o600); err != nil {
 		t.Fatalf("write temp source: %v", err)
 	}

@@ -14,9 +14,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/adapters/sqlite"
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/adapters/sqlite"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // newFixtureStore opens a migrated database in the test's own temporary

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // The Organization section (issue #383, S3/S4): the identity form is multipart

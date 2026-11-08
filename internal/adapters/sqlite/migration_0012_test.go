@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // TestMigration0012 proves the resolved-transition index contract (issue #222):

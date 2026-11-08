@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Category suggestions, the composition (issue #416, S1/S5/S8): one service

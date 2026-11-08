@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // The operational alert pass (issue #408, specs S1-S8): the ASSIGNED agent

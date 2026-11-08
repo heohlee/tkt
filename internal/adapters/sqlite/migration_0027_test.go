@@ -8,7 +8,7 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Migration 0027 tests (notification kinds hold_reminder and hold_closed —

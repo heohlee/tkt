@@ -8,7 +8,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // Instance password policy (issue #414, S1/S4): the two switches and the

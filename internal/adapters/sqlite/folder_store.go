@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // folderStore persists the catalog folder tree (issue #484). Migration 0043

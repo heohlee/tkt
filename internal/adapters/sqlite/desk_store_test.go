@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Desk persistence covers the desk-management CRUD and N:N membership

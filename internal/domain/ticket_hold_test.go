@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Ticket on hold while waiting for the requester (issue #352). The hold is

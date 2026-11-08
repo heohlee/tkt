@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 func TestLanguagePreferencesStore(t *testing.T) {

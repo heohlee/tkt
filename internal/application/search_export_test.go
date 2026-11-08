@@ -5,8 +5,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // The ticket export walk (issue #409, specs S21-S22): it returns EVERY match,

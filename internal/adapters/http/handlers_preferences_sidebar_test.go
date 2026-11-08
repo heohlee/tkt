@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // Collapsible sidebar (issue #377, S2): the shell's toggle POSTs

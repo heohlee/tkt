@@ -8,7 +8,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Company sign-in (issue #419): employees sign in with their Google Workspace

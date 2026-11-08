@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // API access (issue #488): service users, the API keys they own, the instance

@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // UserService implements the managed-user use cases (user-management spec):

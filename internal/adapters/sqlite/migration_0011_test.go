@@ -8,7 +8,7 @@ import (
 	"testing/fstest"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 func pre0011Migrations(t *testing.T) fstest.MapFS {

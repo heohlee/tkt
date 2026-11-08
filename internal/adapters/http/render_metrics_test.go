@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 // svgTags returns every opening tag of the given kind inside an SVG fragment.

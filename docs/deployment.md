@@ -22,7 +22,7 @@ The image owns the runtime contract, so every way of running it gets the same de
 There is no shell or package manager inside: inspect the container instead of running commands
 in it.
 
-Tags: a `vX.Y.Z` tag publishes `ghcr.io/giulianotesta7/tkt` with the full version, the minor
+Tags: a `vX.Y.Z` tag publishes `ghcr.io/heohlee/tkt` with the full version, the minor
 version and `latest`. Nothing rolls from the main branch, so `latest` moves only on a release,
 so the recommended installation uses the published image.
 
@@ -38,7 +38,7 @@ docker build --build-arg VERSION=dev --build-arg REVISION="$(git rev-parse HEAD)
 ```
 
 A normal `go build ./cmd/server` uses Go's embedded VCS revision when no release is injected.
-For a release binary, pass `-ldflags="-X github.com/giulianotesta7/tkt/internal/version.Release=v1.2.3"`.
+For a release binary, pass `-ldflags="-X github.com/heohlee/tkt/internal/version.Release=v1.2.3"`.
 Source archives without version or VCS metadata display `dev`.
 
 ## Run it
@@ -52,7 +52,7 @@ docker compose up -d --no-build
 
 It publishes `8080` on the host, mounts the Compose volume `tkt-data` at `/data`, and sets the
 restart policy to `unless-stopped`. The image reference is
-`ghcr.io/giulianotesta7/tkt:${TKT_TAG:-latest}`: set `TKT_TAG` to pin a release. With the default
+`ghcr.io/heohlee/tkt:${TKT_TAG:-latest}`: set `TKT_TAG` to pin a release. With the default
 project name `tkt` Docker names the volume
 `tkt_tkt-data`; the standalone example below creates a different volume named `tkt-data`.
 
@@ -70,13 +70,13 @@ docker compose up -d --build --pull never
 
 ```console
 docker volume create tkt-data
-docker pull ghcr.io/giulianotesta7/tkt:latest
+docker pull ghcr.io/heohlee/tkt:latest
 docker run -d \
   --name tkt \
   --restart unless-stopped \
   -p 127.0.0.1:8080:8080 \
   -v tkt-data:/data \
-  ghcr.io/giulianotesta7/tkt:latest
+  ghcr.io/heohlee/tkt:latest
 ```
 
 ## Check that it is running

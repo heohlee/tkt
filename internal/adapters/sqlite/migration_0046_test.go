@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 func TestMigration0046PreservesLegacyRows(t *testing.T) {

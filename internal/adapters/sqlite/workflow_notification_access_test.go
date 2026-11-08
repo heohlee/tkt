@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Notification recipients are re-proved against the ticket the plan LEAVES

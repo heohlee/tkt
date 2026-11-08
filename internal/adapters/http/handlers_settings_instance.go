@@ -3,8 +3,8 @@ package httpadapter
 import (
 	"net/http"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/version"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/version"
 )
 
 func (h *SettingsHandlers) WithInstance(instance *application.InstanceSettingsService) *SettingsHandlers {

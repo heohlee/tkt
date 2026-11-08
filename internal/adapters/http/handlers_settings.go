@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 // SettingsHandlers expose the instance configuration settings (issue #383,

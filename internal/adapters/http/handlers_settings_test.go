@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Settings sections (issue #383, S1/S2): GET /settings redirects to the first

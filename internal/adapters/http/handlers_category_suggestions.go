@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // Category suggestions over HTTP (issue #416, S2/S3/S6): the fragment both

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // emailOutboxStore implements application.EmailOutbox (issue #362): the
