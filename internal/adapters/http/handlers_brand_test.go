@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // The instance identity in the shell (issue #383, S5): the session middleware

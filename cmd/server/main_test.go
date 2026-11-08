@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/adapters/sqlite"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/adapters/sqlite"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // TestHealthcheckExec proves the -healthcheck flag opens the database and

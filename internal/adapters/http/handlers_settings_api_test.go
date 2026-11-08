@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // API section on the Settings screen (issue #488, S4/S5/S7): administrators

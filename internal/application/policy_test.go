@@ -3,7 +3,7 @@ package application
 import (
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Task 1.3: central server-side policy (role-authorization spec). Written

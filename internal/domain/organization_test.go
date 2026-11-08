@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Organization identity rules (issue #383, S3): the name is required, trimmed

@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // settingsKeyPasswordChangeEnabled, settingsKeyPasswordRecoveryEnabled and

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // The company sign-in surfaces carry the providers' marks and keep their field

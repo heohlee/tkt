@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // TestMigration0021KindVocabularyMatchesDomainConstants derives the kind list

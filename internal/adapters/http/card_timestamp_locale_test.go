@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 // TestCardTimestampBytesAreLocaleFrozen pins the card timestamp for every

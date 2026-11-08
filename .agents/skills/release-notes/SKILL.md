@@ -3,7 +3,7 @@ name: release-notes
 description: "Trigger: release notes, release message, notas de release, mensaje de release. Draft concise, evidence-backed tkt release copy without publishing."
 license: Apache-2.0
 metadata:
-  author: "giulianotesta7"
+  author: "heohlee"
   version: "1.0"
 ---
 

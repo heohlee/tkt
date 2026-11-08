@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Issue #344 slice B3 at the HTTP boundary: posting a comment now writes the

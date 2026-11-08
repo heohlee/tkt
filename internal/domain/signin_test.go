@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Sign-in panel rules (issue #383, S9/S10): every text field is plain text with

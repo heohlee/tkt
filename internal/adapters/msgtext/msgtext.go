@@ -4,8 +4,8 @@
 package msgtext
 
 import (
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 // Resolve renders one application message reference through the catalogue:

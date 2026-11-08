@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // Category suggestion settings (issue #416, S7) live in the keyed settings

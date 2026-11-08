@@ -1,4 +1,4 @@
-module github.com/giulianotesta7/tkt
+module github.com/heohlee/tkt
 
 go 1.26.10
 

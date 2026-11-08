@@ -6,7 +6,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // preferencesStore implements application.PreferencesStore over the

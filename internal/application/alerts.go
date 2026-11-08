@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Operational alerts (issue #408). An agent used to learn a ticket was in

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // SLAService implements the SLA projection use case (issue #211): derive

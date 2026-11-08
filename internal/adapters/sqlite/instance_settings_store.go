@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 const settingsKeyInstanceAddress = "instance_address"

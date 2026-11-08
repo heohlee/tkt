@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // In-memory port fakes (slice 2 runtime harness: "port fakes only; bcrypt

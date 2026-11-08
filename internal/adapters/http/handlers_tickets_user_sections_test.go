@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // This file pins the requester's three-section list (issue #411, S3/S4/S5/S7/

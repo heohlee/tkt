@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // The requester catalog over folders (issue #484, S7, S9, S11): the two-step

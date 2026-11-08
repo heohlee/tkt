@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/adapters/msgtext"
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/adapters/msgtext"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // End to end over the real store (issue #362): a ticket change writes the

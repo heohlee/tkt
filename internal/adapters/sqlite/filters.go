@@ -3,8 +3,8 @@ package sqlite
 import (
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // createdTiebreak is the shared D2 created/id tiebreak: newest first by

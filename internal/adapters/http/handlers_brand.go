@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // The instance identity (issue #383, S5): the organization name, help desk

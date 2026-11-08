@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Email settings (issue #362): TKT delivers its notifications through the

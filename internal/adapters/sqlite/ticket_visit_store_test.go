@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Issue #415: the visit store remembers how much of a ticket's history a user

@@ -3,7 +3,7 @@ name: e2e-playwright
 description: "Trigger: visible features, critical journeys, browser-observable bugs, or E2E coverage. Maintain versioned Playwright regression tests."
 license: MIT
 metadata:
-  author: "giulianotesta7"
+  author: "heohlee"
   version: "1.6"
 ---
 

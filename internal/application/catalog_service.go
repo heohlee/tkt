@@ -5,7 +5,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // CategoryAvailability supplies the categories currently available for new

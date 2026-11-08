@@ -7,7 +7,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Automatic hold expiry (issue #353). A ticket put on hold waits for the

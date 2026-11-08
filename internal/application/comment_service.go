@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // CommentService implements the comment timeline use cases

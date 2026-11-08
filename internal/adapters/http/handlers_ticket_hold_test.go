@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 // This file drives the ticket on-hold surface (issue #352, S2/S3/S5/S6/S8)

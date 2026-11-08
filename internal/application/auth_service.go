@@ -7,7 +7,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // SessionTTL is the server-side session lifetime (D14), fixed at 24h.

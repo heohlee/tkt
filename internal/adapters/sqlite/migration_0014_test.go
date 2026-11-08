@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // RED tests for migration 0014 (per-category SLA configuration — issue

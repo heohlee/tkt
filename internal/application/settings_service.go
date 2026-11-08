@@ -3,7 +3,7 @@ package application
 import (
 	"context"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // DefaultInternalCommentBg is the seeded instance color (migration 0005)

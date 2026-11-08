@@ -19,11 +19,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/adapters/msgtext"
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
-	"github.com/giulianotesta7/tkt/internal/i18n"
-	"github.com/giulianotesta7/tkt/web/templates"
+	"github.com/heohlee/tkt/internal/adapters/msgtext"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/i18n"
+	"github.com/heohlee/tkt/web/templates"
 )
 
 const displayTimeLayout = "15:04 · 02-01-2006"

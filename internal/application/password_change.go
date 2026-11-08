@@ -5,7 +5,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // ErrMsgCurrentPasswordIncorrect is the ONE refusal for a wrong current

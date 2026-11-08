@@ -3,7 +3,7 @@ name: issue-governance
 description: "Trigger: creating an issue, starting a feature, fixing a bug, labeling, planning work, or any change to the tkt repository. Require a GitHub issue for every change, self-authorized on creation, with the canonical type/area label taxonomy applied best-effort."
 license: MIT
 metadata:
-  author: "giulianotesta7"
+  author: "heohlee"
   version: "1.0"
 ---
 
@@ -90,4 +90,4 @@ Return:
 ## References
 
 - `../../../AGENTS.md` — project skill registration (this skill is listed there).
-- GitHub labels: `gh label list --repo giulianotesta7/tkt`.
+- GitHub labels: `gh label list --repo heohlee/tkt`.

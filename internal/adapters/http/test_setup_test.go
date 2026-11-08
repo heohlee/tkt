@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/adapters/sqlite"
+	"github.com/heohlee/tkt/internal/adapters/sqlite"
 )
 
 // TestOpenTestStoreMatchesAFreshMigration proves that a store opened from the

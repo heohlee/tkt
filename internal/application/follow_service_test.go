@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Following and mentions (issue #418). The two rules under test are the ones

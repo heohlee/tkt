@@ -6,7 +6,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Task 4.6: category store — UNIQUE name → Duplicate, delete guard →

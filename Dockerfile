@@ -8,7 +8,7 @@ WORKDIR /src
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
-RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w -X github.com/giulianotesta7/tkt/internal/version.Release=$VERSION -X github.com/giulianotesta7/tkt/internal/version.Revision=$REVISION" -o /out/server ./cmd/server
+RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w -X github.com/heohlee/tkt/internal/version.Release=$VERSION -X github.com/heohlee/tkt/internal/version.Revision=$REVISION" -o /out/server ./cmd/server
 # Prepare the data directory with non-root ownership: the distroless image
 # runs as UID 65532, and a fresh named volume inherits this directory's
 # ownership on first mount, so the server can create /data/tkt.db.
@@ -22,8 +22,8 @@ ARG REVISION=unknown
 # the server binary and these labels as build args. No .licenses label: the repository has no LICENSE file.
 LABEL org.opencontainers.image.title="tkt" \
       org.opencontainers.image.description="Single-binary ticket tracker on an embedded SQLite database" \
-      org.opencontainers.image.source="https://github.com/giulianotesta7/tkt" \
-      org.opencontainers.image.url="https://github.com/giulianotesta7/tkt" \
+      org.opencontainers.image.source="https://github.com/heohlee/tkt" \
+      org.opencontainers.image.url="https://github.com/heohlee/tkt" \
       org.opencontainers.image.version=$VERSION \
       org.opencontainers.image.revision=$REVISION
 COPY --from=build --chown=65532:65532 /out/server /server

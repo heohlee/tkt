@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // cannedReplyStore persists saved replies over the canned_replies table of

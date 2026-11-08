@@ -3,7 +3,7 @@ name: go-tests
 description: "Trigger: Go tests, backend behavior, authorization, domain rules, migrations, golden fixtures, or Go CI evidence. Govern the five Go test layers of this repository and the gates that prove them."
 license: MIT
 metadata:
-  author: "giulianotesta7"
+  author: "heohlee"
   version: "1.0"
 ---
 

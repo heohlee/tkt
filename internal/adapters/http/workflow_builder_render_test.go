@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // The approved redesign (issue #395, option A) turns the workflow builder into

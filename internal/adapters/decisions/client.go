@@ -23,7 +23,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // RequestTimeout bounds one call. It matches the two seconds S5 allows before

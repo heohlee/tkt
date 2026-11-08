@@ -1,7 +1,7 @@
 package httpadapter
 
 import (
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 	"html"
 	"net/url"
 	"strconv"

@@ -3,7 +3,7 @@ name: design-system
 description: "Trigger: templates, CSS, layout, visual components, responsive behavior, accessibility, or visible HTMX interactions. Extend TKT's approved design patterns, theme tokens, and measured checks."
 license: MIT
 metadata:
-  author: "giulianotesta7"
+  author: "heohlee"
   version: "2.0"
 ---
 

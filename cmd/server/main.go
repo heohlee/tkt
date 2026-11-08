@@ -28,14 +28,14 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/adapters/decisions"
-	httpadapter "github.com/giulianotesta7/tkt/internal/adapters/http"
-	"github.com/giulianotesta7/tkt/internal/adapters/mail"
-	"github.com/giulianotesta7/tkt/internal/adapters/msgtext"
-	"github.com/giulianotesta7/tkt/internal/adapters/oidc"
-	"github.com/giulianotesta7/tkt/internal/adapters/secretbox"
-	"github.com/giulianotesta7/tkt/internal/adapters/sqlite"
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/adapters/decisions"
+	httpadapter "github.com/heohlee/tkt/internal/adapters/http"
+	"github.com/heohlee/tkt/internal/adapters/mail"
+	"github.com/heohlee/tkt/internal/adapters/msgtext"
+	"github.com/heohlee/tkt/internal/adapters/oidc"
+	"github.com/heohlee/tkt/internal/adapters/secretbox"
+	"github.com/heohlee/tkt/internal/adapters/sqlite"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 type systemClock struct{}

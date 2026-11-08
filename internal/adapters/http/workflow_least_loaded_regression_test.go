@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // Issue #344 regression on the least_loaded routing rows (S10 "state changed →

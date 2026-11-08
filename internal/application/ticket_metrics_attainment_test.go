@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // attainmentFrozen builds a frozen commitment anchored at base with the given

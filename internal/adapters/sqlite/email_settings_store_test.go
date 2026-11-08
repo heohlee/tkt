@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // Email settings (issue #362) live in the keyed settings table: no

@@ -3,7 +3,7 @@ name: pr-governance
 description: "Trigger: creating, preparing, or reviewing a pull request in this repository. Apply this repository's own PR rules: issue linkage with no approval label, the branch prefixes actually in use, and the checks that really run."
 license: MIT
 metadata:
-  author: "giulianotesta7"
+  author: "heohlee"
   version: "1.0"
 ---
 

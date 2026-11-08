@@ -6,8 +6,8 @@ import (
 	"math"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/i18n"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/i18n"
 )
 
 // ticketMetricsSummaryView is the dashboard's derived-figure block (issue #393,

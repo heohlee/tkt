@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // PageSize is the fixed pagination window (D2): 10 per page, no env knob.

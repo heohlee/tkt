@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // settingsKeyMCPEnabled holds the instance MCP switch ('1' on, anything else or

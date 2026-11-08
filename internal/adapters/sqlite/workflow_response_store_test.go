@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 func TestWorkflowResponseStore_PinnedDefinitionAndMalformedIndexes(t *testing.T) {

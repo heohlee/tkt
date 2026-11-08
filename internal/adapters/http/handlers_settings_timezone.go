@@ -6,7 +6,7 @@ import (
 	"time"
 	_ "time/tzdata" // Suggestions must resolve even when the host has no zone database.
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // timezoneCatalogue is the name index of Go 1.26.10's IANA zoneinfo.zip.

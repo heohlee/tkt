@@ -3,7 +3,7 @@ name: engram-governance
 description: "Trigger: TKT behavior changes, domain rules, authorization, contracts, decisions, bugfixes, discoveries, memory recall, or session closure. Govern TKT records with native Engram search and durable bookkeeping."
 license: MIT
 metadata:
-  author: "giulianotesta7"
+  author: "heohlee"
   version: "1.0"
 ---
 

@@ -12,8 +12,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/i18n"
-	"github.com/giulianotesta7/tkt/web/templates"
+	"github.com/heohlee/tkt/internal/i18n"
+	"github.com/heohlee/tkt/web/templates"
 )
 
 // staticAsset is one embedded file served at one explicit route. Each route

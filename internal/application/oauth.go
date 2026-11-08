@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/domain"
+	"github.com/heohlee/tkt/internal/domain"
 )
 
 // MCP OAuth (issue #493): tkt is the OAuth 2.1 authorization server of its own

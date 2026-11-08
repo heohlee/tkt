@@ -23,7 +23,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/giulianotesta7/tkt/internal/application"
+	"github.com/heohlee/tkt/internal/application"
 )
 
 // sendTimeout bounds one whole delivery — connect, handshake, and
