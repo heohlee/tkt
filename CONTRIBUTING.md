@@ -23,7 +23,7 @@ mkdir -p data
 ```
 
 Branch prefixes are `feat/`, `fix/`, `chore/`, `test/`, and `docs/`. When the change has an
-issue, you may put its number in the names, for example branch `feat/123-short-slug` in
+issue, its number goes in the names: branch `feat/123-short-slug` in
 `../tkt-worktrees/issue-123-short-slug`. [worktree-isolation](.agents/skills/worktree-isolation/SKILL.md) explains the
 per-worktree port and database rule.
 

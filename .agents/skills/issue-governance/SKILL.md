@@ -82,8 +82,7 @@ Requiring an issue before every pull request discourages contributions and doubl
 Return:
 
 - `issue`: number/URL of the governing issue, or "none";
-- `labels_valid`: true / false — with the exact taxonomy deviation if false;
-- `labels_valid` applies only when an issue exists;
+- `labels_valid`: true / false — with the exact taxonomy deviation if false; only when an issue exists;
 - `gate`: GO — a missing issue, missing approval or imperfect label never makes it BLOCKED.
 
 ## References
