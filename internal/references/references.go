@@ -19,6 +19,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"runtime"
+	"slices"
 	"strings"
 )
 
@@ -130,4 +131,98 @@ func Resolve(root string, ref Ref) string {
 func Exists(root string, ref Ref) bool {
 	_, err := os.Stat(Resolve(root, ref))
 	return err == nil
+}
+
+// SkillsDir returns the directory that holds one subdirectory per project skill.
+func SkillsDir(root string) string {
+	return filepath.Join(root, ".agents", "skills")
+}
+
+// SkillNames returns the directory name of every project skill, which is also
+// the name a skill would be cited by.
+func SkillNames(root string) ([]string, error) {
+	entries, err := os.ReadDir(SkillsDir(root))
+	if err != nil {
+		return nil, fmt.Errorf("read skills: %w", err)
+	}
+	var names []string
+	for _, entry := range entries {
+		if entry.IsDir() {
+			names = append(names, entry.Name())
+		}
+	}
+	if len(names) == 0 {
+		return nil, fmt.Errorf("no skills found under %s", SkillsDir(root))
+	}
+	return names, nil
+}
+
+// SkillDocs returns every Markdown file under the skills directory, including
+// a skill's references and assets, not only its SKILL.md.
+func SkillDocs(root string) ([]string, error) {
+	var docs []string
+	err := filepath.WalkDir(SkillsDir(root), func(path string, d os.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		if !d.IsDir() && strings.HasSuffix(path, ".md") {
+			docs = append(docs, path)
+		}
+		return nil
+	})
+	if err != nil {
+		return nil, fmt.Errorf("walk skills: %w", err)
+	}
+	return docs, nil
+}
+
+// CrossRef is one place where a skill document depends on something outside
+// its own skill: another skill or the skill index.
+type CrossRef struct {
+	Line   int    // 1-based line number
+	Target string // the skill name, or "AGENTS.md"
+	Text   string // the matched text
+}
+
+// CrossRefs reports every line of a document in skill own that names another
+// skill or AGENTS.md. A skill is named by a relative path into its directory
+// (`../go-tests/`, `.agents/skills/go-tests/`) or by its directory name as a
+// backticked token or path segment. Each skill must be usable alone, so the
+// fact it needs is stated inline instead of pointed at.
+//
+// Blind spot, accepted on purpose: a skill name in plain prose without
+// backticks or a path is not reported, because ordinary words such as
+// "design system" would otherwise need an exception list.
+func CrossRefs(own string, body []byte, names []string) []CrossRef {
+	var found []CrossRef
+	for i, line := range strings.Split(string(body), "\n") {
+		if strings.Contains(line, "AGENTS.md") {
+			found = append(found, CrossRef{Line: i + 1, Target: "AGENTS.md", Text: "AGENTS.md"})
+		}
+		for _, name := range names {
+			if name == own {
+				continue
+			}
+			if text := namedSkill(line, name); text != "" {
+				found = append(found, CrossRef{Line: i + 1, Target: name, Text: text})
+			}
+		}
+	}
+	return found
+}
+
+// namedSkill returns the first text in line that names skill name, or an empty
+// string. One line reports a skill once, however many forms name it.
+func namedSkill(line, name string) string {
+	for _, path := range []string{"../" + name + "/", "skills/" + name + "/"} {
+		if strings.Contains(line, path) {
+			return path
+		}
+	}
+	for _, match := range RefPattern.FindAllStringSubmatch(line, -1) {
+		if slices.Contains(strings.Split(match[1], "/"), name) {
+			return "`" + match[1] + "`"
+		}
+	}
+	return ""
 }

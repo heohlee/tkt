@@ -46,9 +46,12 @@ Skip backend-only, documentation-only, and nonvisual tooling changes.
    destructive actions distinguishable.
 3. Check narrow and wide layouts, both themes, and applicable hover, focus, pressed,
    disabled, loading, empty, error, and unsaved states.
-4. Run applicable golden, layout, and browser checks through the referenced project
-   skills. Read computed styles, font loading, actual-surface contrast, and overflow;
-   a screenshot alone is not proof.
+4. Run the applicable checks: the golden tests in `internal/adapters/http` (fix the
+   handler first, regenerate with `-update`, then re-run without it), the Playwright
+   suite with `npm test` from `e2e/`, and a Playwright CLI pass over every changed screen
+   on an isolated server, which is required even when lower-layer tests cover it. Read
+   computed styles, font loading, actual-surface contrast, and overflow; a screenshot
+   alone is not proof.
 
 ## Output Contract
 
@@ -59,6 +62,7 @@ and unresolved design decisions or missing evidence.
 
 - `./references/foundations.md` — visual contracts, remediation order, and enforcement.
 - `./references/patterns.md` — integrated composition and interaction examples.
-- `../e2e-playwright/SKILL.md` — browser regression requirements.
-- `../go-tests/SKILL.md` — applicable Go and golden checks.
-- `../engram-governance/SKILL.md` — behavioral requirements and decision records.
+- `../../../e2e/README.md` — the browser suite, its isolated server, and its boundary.
+- `../../../internal/adapters/http/golden_test.go` — golden snapshots and the update-then-prove workflow.
+- Behavioral requirements and design decisions live in Engram records scoped to
+  `project: "tkt"`; search them before assuming behavior and save new decisions there.

@@ -3,6 +3,7 @@ package references
 import (
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 	"testing"
 )
@@ -77,4 +78,85 @@ func TestDocumentedPathsExist(t *testing.T) {
 	}
 
 	t.Logf("validated %d references across %d files; skipped %d tokens as non-paths", validated, len(sources), len(skips))
+}
+
+// TestSkillsAreSelfContained fails when a skill document names another skill
+// or AGENTS.md. Each skill is loaded on its own trigger, often without the
+// others, so a rule it needs from elsewhere must be stated inline rather than
+// pointed at.
+func TestSkillsAreSelfContained(t *testing.T) {
+	root, err := RepoRoot()
+	if err != nil {
+		t.Fatalf("repo root: %v", err)
+	}
+
+	names, err := SkillNames(root)
+	if err != nil {
+		t.Fatalf("skill names: %v", err)
+	}
+	if len(names) < 2 {
+		t.Fatalf("expected at least two skills to check against each other, got %v", names)
+	}
+
+	docs, err := SkillDocs(root)
+	if err != nil {
+		t.Fatalf("skill docs: %v", err)
+	}
+	if len(docs) < len(names) {
+		t.Fatalf("expected at least one document per skill, got %d documents for %d skills", len(docs), len(names))
+	}
+
+	for _, doc := range docs {
+		rel, err := filepath.Rel(root, doc)
+		if err != nil {
+			rel = doc
+		}
+		skillRel, err := filepath.Rel(SkillsDir(root), doc)
+		if err != nil {
+			t.Fatalf("locate %s: %v", rel, err)
+		}
+		own, _, _ := strings.Cut(filepath.ToSlash(skillRel), "/")
+
+		t.Run(rel, func(t *testing.T) {
+			body, err := os.ReadFile(doc)
+			if err != nil {
+				t.Fatalf("read %s: %v", rel, err)
+			}
+			for _, ref := range CrossRefs(own, body, names) {
+				t.Errorf("%s:%d: names %s (%s)\nstate the needed fact inline instead of pointing at it", rel, ref.Line, ref.Target, ref.Text)
+			}
+		})
+	}
+}
+
+// TestCrossRefsDetection pins what CrossRefs reports, so a loosened detector
+// cannot make TestSkillsAreSelfContained pass while checking nothing.
+func TestCrossRefsDetection(t *testing.T) {
+	names := []string{"go-tests", "e2e-playwright", "design-system"}
+	cases := []struct {
+		name string
+		line string
+		want []string
+	}{
+		{"relative path", "- `../go-tests/SKILL.md` — Go checks", []string{"go-tests"}},
+		{"nested relative path", "see ../../e2e-playwright/SKILL.md", []string{"e2e-playwright"}},
+		{"repository path", "- `.agents/skills/go-tests/SKILL.md`", []string{"go-tests"}},
+		{"backticked name", "(that is `e2e-playwright`)", []string{"e2e-playwright"}},
+		{"skill index", "- `AGENTS.md`: skill registration", []string{"AGENTS.md"}},
+		{"two skills on one line", "`go-tests` or `e2e-playwright`", []string{"go-tests", "e2e-playwright"}},
+		{"own skill", "- `design-system` and `../design-system/SKILL.md`", nil},
+		{"plain prose", "Playwright and Go tests and the design system", nil},
+		{"unrelated path", "- `.github/workflows/e2e.yml` and `internal/adapters/http/golden_test.go`", nil},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			var got []string
+			for _, ref := range CrossRefs("design-system", []byte(tc.line), names) {
+				got = append(got, ref.Target)
+			}
+			if !slices.Equal(got, tc.want) {
+				t.Errorf("CrossRefs(%q) = %v, want %v", tc.line, got, tc.want)
+			}
+		})
+	}
 }

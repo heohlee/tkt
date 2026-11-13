@@ -21,9 +21,9 @@ Activate when the work touches:
 
 Do NOT activate for:
 
-- Go application behavior with no container impact (that is `go-tests`);
-- browser journeys or visual baselines (that is `e2e-playwright`);
-- Engram artifact bookkeeping on its own (that is `engram-governance`).
+- Go application behavior or Go tests with no container impact;
+- browser journeys or visual baselines in the Playwright suite;
+- Engram record bookkeeping on its own.
 
 ## Hard Rules
 
@@ -88,10 +88,8 @@ Report: the files changed on each side of the contract, the focused and full tes
 
 ## References
 
-- `../../../AGENTS.md` — the skill index this file is registered in
-- `../../../internal/container/container_test.go` — the machine check and its stated blind spots
+- `../../../internal/container/container_test.go` — the machine check and its stated blind spots; an ordinary Go test package with no database or server, which CI runs in the `rest` race shard of `.github/workflows/quality.yml`
 - `../../../Dockerfile` — the image contract
 - `../../../docker-compose.yml` — the compose contract
 - `../../../.github/workflows/container.yml` — the CI smoke test
 - `../../../.github/workflows/release-container.yml` — the release publish workflow
-- `../go-tests/SKILL.md` — the Go test layers the machine check lives in
