@@ -1,6 +1,6 @@
 ---
 name: pr-governance
-description: "Trigger: creating, preparing, or reviewing a pull request in this repository. Apply this repository's own PR rules: issue linkage with no approval label, the branch prefixes actually in use, and the checks that really run."
+description: "Trigger: creating, preparing, or reviewing a pull request in this repository. Apply this repository's own PR rules: optional issue linkage with no approval label, the branch prefixes actually in use, and the checks that really run."
 license: MIT
 metadata:
   author: "heohlee"
@@ -30,11 +30,11 @@ skills authoritative: apply this file and do not reconcile the two.
 
 ## Hard Rules
 
-- Every pull request links its governing issue with `Closes #<n>`. The issue is
-  required by `.agents/skills/issue-governance/SKILL.md`; it needs no
-  `status:approved` label and no approval step.
+- When a governing issue exists, link it with a standalone `Closes #<n>` line. The
+  issue is optional (`issue-governance`) and no check requires the line; a missing
+  issue or link never blocks a PR. No `status:approved` label or approval step is needed.
 - Labels on the pull request are optional. Do not add a `type:*` label to satisfy a
-  rule; the governing issue's labels carry the classification.
+  rule; when an issue exists, its labels carry the classification.
 - The pull request body follows `.github/PULL_REQUEST_TEMPLATE.md`.
 - Every required check must pass before merge. The check definitions live under
   `.github/workflows/`; point at them and do not restate them.
@@ -52,8 +52,9 @@ Format: type/slug — lowercase, no spaces.
 | docs/ | documentation only |
 
 These are the prefixes this repository actually uses; do not invent others.
-Include the governing issue number in the slug when one exists, so a feature
-branch for issue 123 reads feat/123-metrics-link-sync.
+Include the issue number in the slug only when an issue exists, so a feature
+branch for issue 123 reads feat/123-metrics-link-sync; without an issue it reads
+feat/metrics-link-sync.
 
 ## What Proves A Pull Request Here
 
@@ -62,11 +63,9 @@ Point at the sources instead of repeating them, because duplicated rules drift:
 - `.github/workflows/` — the checks that actually run
 - `.agents/skills/go-tests/SKILL.md` — the Go test layers
 - `.agents/skills/e2e-playwright/SKILL.md` — browser regression coverage
-- `.agents/skills/issue-governance/SKILL.md` — issue requirement and label taxonomy
+- `.agents/skills/issue-governance/SKILL.md` — optional issue policy and label taxonomy
 
-The PR issue check in `.github/workflows/pr-issue.yml` validates a standalone
-`Closes #<number>` line against an existing local issue. It does not require an approval
-label or assignee. Never report a check as missing when it was never configured.
+Never report a check as missing when it was never configured.
 
 ## Commit Format
 
@@ -82,13 +81,12 @@ not rely on the individual branch commits surviving.
 Return:
 
 - `pr`: number/URL of the pull request, or "none";
-- `issue_linked`: true / false — with the body line that links it;
+- `issue_linked`: true / false / "no issue" — with the body line that links it; informational only;
 - `branch_valid`: true / false — with the prefix that broke the naming rule;
-- `gate`: GO or BLOCKED — BLOCKED when the pull request does not link its
-  governing issue, or when a required check fails or is pending.
+- `gate`: GO or BLOCKED — BLOCKED only when a required check fails or is pending.
 
 ## References
 
 - `AGENTS.md` — skill registration, workflow gates, and skill precedence.
-- `.agents/skills/issue-governance/SKILL.md` — issue requirement, label taxonomy, and decision gates.
+- `.agents/skills/issue-governance/SKILL.md` — optional issue policy, label taxonomy, and decision gates.
 - `.github/PULL_REQUEST_TEMPLATE.md` — the pull request body contract.

@@ -20,5 +20,4 @@
 
 ## Related issue
 
-<!-- Replace the placeholder with an existing issue number in this repository. -->
-Closes #
+<!-- If this PR resolves an issue, add a standalone line such as: Closes #123 (optional). -->
