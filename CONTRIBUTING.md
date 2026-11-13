@@ -10,7 +10,7 @@ the checks a change has to pass. The repository rules that go beyond this guide 
 Pull requests are welcome without an issue: opening one first is optional. For large or
 design-changing work, an issue lets us agree on the idea before you write code. There is no
 approval step. The issue policy and the label taxonomy are in
-[issue-governance](.agents/skills/issue-governance/SKILL.md).
+[git-workflow](.agents/skills/git-workflow/SKILL.md).
 
 Work in a worktree so changes can run in parallel without sharing a database or a port.
 From the existing checkout (the repository root):
@@ -24,7 +24,7 @@ mkdir -p data
 
 Branch prefixes are `feat/`, `fix/`, `chore/`, `test/`, and `docs/`. When the change has an
 issue, its number goes in the names: branch `feat/123-short-slug` in
-`../tkt-worktrees/issue-123-short-slug`. [worktree-isolation](.agents/skills/worktree-isolation/SKILL.md) explains the
+`../tkt-worktrees/issue-123-short-slug`. [git-workflow](.agents/skills/git-workflow/SKILL.md) explains the
 per-worktree port and database rule.
 
 ## Local development
@@ -142,6 +142,6 @@ carries the classification. The title becomes the squash-merge commit message, s
 write it as a conventional commit with a scope, for example `docs(readme): add quick start`.
 
 Every required check has to pass before merge. The definitions and the branch rules are in
-[pr-governance](.agents/skills/pr-governance/SKILL.md) and `.github/workflows/`.
+[git-workflow](.agents/skills/git-workflow/SKILL.md) and `.github/workflows/`.
 
 tkt is licensed under the Apache License 2.0; see [LICENSE](LICENSE).

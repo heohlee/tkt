@@ -15,7 +15,7 @@ Use for TKT behavior changes, governed work, durable decisions, bugfixes, discov
 
 - Scope every Engram read and write to `project: "tkt"`.
 - Before relying on prior work, use `mem_context` and `mem_search` to find records by descriptive title, source path, domain, issue, or change name.
-- An issue is optional. When a governing issue exists, use it for record keys and searches and align against it; otherwise identify the change by its branch slug (the `<slug>` in `<type>/<slug>`). Either way, align canonical requirements, the active delta, implementation, tests, and validation evidence.
+- An issue is optional. When a governing issue exists, use it for record keys and searches and align against it; otherwise identify the change by its branch slug (the `<slug>` in `<type>/<slug>`; with an issue the branch is `<type>/<n>-<slug>`). An issue never gates work, and `status:approved` authorizes nothing. Either way, align canonical requirements, the active delta, implementation, tests, and validation evidence.
 - Save durable decisions, bugfixes, patterns, discoveries, configuration, and preferences with What, Why, Where, and Learned. Use `topic_key` only to upsert one evolving record.
 - Prefer slash-separated `family/description` keys. Use `mem_suggest_topic_key` when unclear, and avoid pointer records when the complete evolving record can carry its own key.
 - Preserve migration memories, but do not treat them as required routing or prerequisites. If an SDD workflow is explicitly selected, use its established `sdd/<change>/<phase>` keys.
@@ -45,6 +45,5 @@ Return applicability, records consulted, changed files, exact validation evidenc
 ## References
 
 - `AGENTS.md`: skill registration and repository workflow.
-- `.agents/skills/issue-governance/SKILL.md`: optional issue policy, label taxonomy, and decision gates.
 - `.agents/skills/e2e-playwright/SKILL.md`: browser regression requirements.
 - `.agents/skills/go-tests/SKILL.md`: Go test layer and its closing gates.
