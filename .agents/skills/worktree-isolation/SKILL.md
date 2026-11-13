@@ -14,9 +14,9 @@ Run before the first write of any change — feature, bug, chore, docs, or skill
 ## Hard Rules
 
 - One change, one worktree, one branch. The main checkout is for reading, syncing, and merging.
-- The worktree goes in the sibling directory next to the repository root, never inside it: `../tkt-worktrees/<issue-slug>`.
-- Directory issue-<n>-<slug>, branch <type>/<n>-<slug>, based on an updated default branch.
-- The governing issue comes first: `../issue-governance/SKILL.md` states the requirement, and `../pr-governance/SKILL.md` holds the branch prefixes.
+- The worktree goes in the sibling directory next to the repository root, never inside it: `../tkt-worktrees/<dir>`.
+- With an issue: directory `issue-<n>-<slug>`, branch `<type>/<n>-<slug>`. Without one: directory `<type>-<slug>`, branch `<type>/<slug>`. Both are based on an updated default branch.
+- An issue is optional; when one exists, it governs the change (`../issue-governance/SKILL.md`). `../pr-governance/SKILL.md` holds the branch prefixes.
 - One worktree, one port. Two default servers both want the port `:8080`.
 
 ## Execution Steps
@@ -25,9 +25,11 @@ Run before the first write of any change — feature, bug, chore, docs, or skill
 
    ```
    git fetch origin
-   git worktree add --track -b <type>/<n>-<slug> ../tkt-worktrees/issue-<n>-<slug> origin/main
-   cd ../tkt-worktrees/issue-<n>-<slug>
+   git worktree add --track -b <type>/<slug> ../tkt-worktrees/<type>-<slug> origin/main
+   cd ../tkt-worktrees/<type>-<slug>
    ```
+
+   When an issue exists, use `-b <type>/<n>-<slug> ../tkt-worktrees/issue-<n>-<slug>` instead.
 
 2. Create the database directory. The store does not create it, and the server fails with `unable to open database file (14)` without it:
 
@@ -50,7 +52,7 @@ Report the worktree path, its branch, the base commit, and the TKT_LISTEN and TK
 ## References
 
 - `../../../AGENTS.md` — skill registration.
-- `../issue-governance/SKILL.md` — the issue requirement and label taxonomy.
+- `../issue-governance/SKILL.md` — the optional issue policy and label taxonomy.
 - `../pr-governance/SKILL.md` — branch prefixes.
 - `cmd/server/main.go` — the TKT_LISTEN and TKT_DB_PATH defaults.
 - `internal/adapters/sqlite/sqlite.go` — the store Open that leaves the database directory to the operator.

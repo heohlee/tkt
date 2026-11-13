@@ -1,6 +1,6 @@
 # tkt — Agent Skills Index
 
-Before contributing, read [CONTRIBUTING.md](CONTRIBUTING.md) for the issue-first workflow.
+Before contributing, read [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute.
 
 Before writing code or starting a change, load the relevant skills below.
 

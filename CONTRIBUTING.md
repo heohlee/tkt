@@ -7,9 +7,9 @@ the checks a change has to pass. The repository rules that go beyond this guide 
 
 ## Before you start
 
-Every change starts with a GitHub issue. The issue is the intent anchor for the work and
-for the `Closes #` line in the pull request; there is no separate approval step. The full
-rule and the label taxonomy are in
+Pull requests are welcome without an issue: opening one first is optional. For large or
+design-changing work, an issue lets us agree on the idea before you write code. There is no
+approval step. The issue policy and the label taxonomy are in
 [issue-governance](.agents/skills/issue-governance/SKILL.md).
 
 Work in a worktree so changes can run in parallel without sharing a database or a port.
@@ -17,13 +17,14 @@ From the existing checkout (the repository root):
 
 ```console
 git fetch origin
-git worktree add --track -b feat/123-short-slug ../tkt-worktrees/issue-123-short-slug origin/main
-cd ../tkt-worktrees/issue-123-short-slug
+git worktree add --track -b feat/short-slug ../tkt-worktrees/feat-short-slug origin/main
+cd ../tkt-worktrees/feat-short-slug
 mkdir -p data
 ```
 
-Branch prefixes are `feat/`, `fix/`, `chore/`, `test/`, and `docs/`; the slug carries the
-issue number. [worktree-isolation](.agents/skills/worktree-isolation/SKILL.md) explains the
+Branch prefixes are `feat/`, `fix/`, `chore/`, `test/`, and `docs/`. When the change has an
+issue, its number goes in the names: branch `feat/123-short-slug` in
+`../tkt-worktrees/issue-123-short-slug`. [worktree-isolation](.agents/skills/worktree-isolation/SKILL.md) explains the
 per-worktree port and database rule.
 
 ## Local development
@@ -113,8 +114,8 @@ go test ./... -race -count=1 -timeout 80m
 
 The workflows are the source of truth for every check:
 `.github/workflows/quality.yml`, `.github/workflows/coverage.yml`,
-`.github/workflows/security.yml`, `.github/workflows/e2e.yml`,
-`.github/workflows/container.yml`, and `.github/workflows/pr-issue.yml`.
+`.github/workflows/security.yml`, `.github/workflows/e2e.yml`, and
+`.github/workflows/container.yml`.
 
 ## Frontend, container, and documentation changes
 
@@ -134,10 +135,10 @@ The workflows are the source of truth for every check:
 
 ## Pull requests
 
-A pull request links an existing issue in this repository on a standalone `Closes #<number>`
-line and follows [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md).
-The PR issue check validates the link; issue approval labels and assignees are not required.
-Labels on the pull request are optional; the issue carries the classification. The title becomes the squash-merge commit message, so
+A pull request follows [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md).
+If it resolves an issue, add a standalone `Closes #<number>` line; the link is optional and
+no check requires it. Labels on the pull request are optional; when an issue exists, it
+carries the classification. The title becomes the squash-merge commit message, so
 write it as a conventional commit with a scope, for example `docs(readme): add quick start`.
 
 Every required check has to pass before merge. The definitions and the branch rules are in

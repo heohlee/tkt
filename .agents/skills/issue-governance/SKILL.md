@@ -1,6 +1,6 @@
 ---
 name: issue-governance
-description: "Trigger: creating an issue, starting a feature, fixing a bug, labeling, planning work, or any change to the tkt repository. Require a GitHub issue for every change, self-authorized on creation, with the canonical type/area label taxonomy applied best-effort."
+description: "Trigger: creating an issue, starting a feature, fixing a bug, labeling, planning work, or any change to the tkt repository. Issues are optional and never gate a change; when one exists, apply the canonical type/area label taxonomy best-effort."
 license: MIT
 metadata:
   author: "heohlee"
@@ -11,10 +11,9 @@ metadata:
 
 Run when a TKT change:
 
-- is about to start, and no issue exists yet for it;
+- is about to start, to decide whether an issue is worth opening first;
 - requires creating, labeling, or triaging a GitHub issue;
-- transitions from planning to implementation;
-- reviews whether work in progress is backed by a governed issue.
+- transitions from planning to implementation with an issue in place.
 
 Do NOT run for:
 
@@ -22,8 +21,9 @@ Do NOT run for:
 
 ## Hard Rules
 
-- This repository is issue-first: every change (feature, bug, docs, chore) MUST have a GitHub issue BEFORE implementation starts. No issue, no work. This is the ONLY blocking gate.
-- Creating the issue authorizes it. This repository has a single maintainer, so no work ever waits for an approval step; `status:approved` does not gate and never blocks implementation.
+- An issue is optional for every change and every contributor: a pull request may arrive without one, and no CI check requires it. Recommend opening an issue first only for large or design-changing work, so the idea can be discussed before code is written. Never block, close or delay a change for lacking an issue.
+- When an issue exists, it is the intent anchor for the change (SDD artifacts, Engram keys) and the target of the PR's `Closes #<n>` line.
+- No work ever waits for an approval step; `status:approved` is informational, does not gate and never blocks implementation.
 - Labels come ONLY from the taxonomy below; the repository contains EXACTLY these 12 labels. Never invent new labels. Apply them best-effort with the closest fit and note the choice; a missing, ambiguous, or imperfect label never blocks or delays work.
 
 ### Label Taxonomy
@@ -35,7 +35,7 @@ Do NOT run for:
 | Status | only when applicable, never a gate | `status:approved` — optional marker. It authorizes nothing and never blocks work. |
 
 - `area:tooling` covers CI, Playwright, skills, Engram change governance, and repository configuration.
-- Cardinality rules apply to the GOVERNING issue. PR labels are optional and do not need to duplicate the issue's labels.
+- Cardinality rules apply to the governing issue when one exists. PR labels are optional and do not need to duplicate the issue's labels.
 - If no area fits a proposed issue, pick the closest fit and note the mismatch in the issue body; never block or delay work over it.
 
 ### Issue Title Prefixes
@@ -55,17 +55,15 @@ Labels remain authoritative for filtering, automation, and governance. The prefi
 
 The feature request template applies the `[Feature]` prefix automatically. Apply the other prefixes manually when drafting an issue. Do not bulk-edit existing issues to add prefixes; existing titles may keep their current format.
 
-### Why there is no approval gate
+### Why there is no issue or approval gate
 
-The repository has a single maintainer, so the approver and the requester are the same person: an approval step adds latency without adding a decision.
-
-The issue itself is still required, because it is the intent anchor referenced by SDD artifacts, Engram keys, and the `Closes #` line in the pull request template. The rule is uniform across change types on purpose: any rule that has to classify the change (feature versus chore, behavior-changing or not) creates a fresh judgment gate. Do not reintroduce an approval step without an explicit maintainer decision.
+Requiring an issue before every pull request discourages contributions and doubles the moderation work: an issue and a pull request for the same change. The rule is uniform across contributors and change types on purpose: any rule that has to classify the person or the change creates a fresh judgment gate. Do not reintroduce issue or approval requirements through labels, title conventions or contributor roles.
 
 ## Decision Gates
 
 | Condition | Result |
 | --- | --- |
-| No issue exists for the requested work | BLOCKED — create the issue first, then start; the issue authorizes itself |
+| No issue exists for the change | GO: the issue is optional; suggest one only for large or design-changing work |
 | Issue exists | GO — proceed (respect other project skills) |
 | Issue lacks a `type:*` label, or has more than one | GO — apply the best fit or note the correction; never block or delay |
 | Issue has zero areas or more than two | GO — apply the best fit or note the correction; never block or delay |
@@ -73,19 +71,19 @@ The issue itself is still required, because it is the intent anchor referenced b
 
 ## Execution Steps
 
-1. **Check tracking**: search open issues for the requested work. If found, work from that issue; if not, create one (title with the canonical prefix, motivation, acceptance criteria).
-2. **Apply labels**: pick exactly one `type:*` and one primary `area:*` (max two). Best-effort is enough — a doubtful label is never a reason to wait.
-3. **Implement**: creating the issue authorized the work. Start immediately; never wait for an approval step.
-4. **Keep labels truthful**: if scope changes mid-work and a different type/area applies, update the issue labels before continuing.
-5. **Close the loop**: when the work is delivered, the issue is the reference for the change; PRs link back to it with `Closes #<n>`.
+1. **Check tracking**: search open issues for the requested work. If one exists, work from it. Open a new issue (title with the canonical prefix, motivation, acceptance criteria) only for large or design-changing work; otherwise start right away without one.
+2. **Apply labels** (when an issue exists): pick exactly one `type:*` and one primary `area:*` (max two). Best-effort is enough — a doubtful label is never a reason to wait.
+3. **Implement**: start immediately; never wait for an issue or an approval step.
+4. **Keep labels truthful**: if an issue exists and scope changes mid-work so a different type/area applies, update the issue labels before continuing.
+5. **Close the loop**: when an issue exists, the PR links it with a standalone `Closes #<n>` line.
 
 ## Output Contract
 
 Return:
 
 - `issue`: number/URL of the governing issue, or "none";
-- `labels_valid`: true / false — with the exact taxonomy deviation if false;
-- `gate`: GO or BLOCKED — BLOCKED only when no issue exists for the requested work.
+- `labels_valid`: true / false — with the exact taxonomy deviation if false; only when an issue exists;
+- `gate`: GO — a missing issue, missing approval or imperfect label never makes it BLOCKED.
 
 ## References
 
