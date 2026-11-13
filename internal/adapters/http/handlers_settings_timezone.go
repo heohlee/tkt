@@ -9,7 +9,7 @@ import (
 	"github.com/heohlee/tkt/internal/domain"
 )
 
-// timezoneCatalogue is the name index of Go 1.26.10's IANA zoneinfo.zip.
+// timezoneCatalogue is the name index of Go 1.26.11's IANA zoneinfo.zip.
 // It is a suggestion catalogue, not an allowlist: the existing calendar
 // validator remains authoritative for typed and previously stored names.
 //

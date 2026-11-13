@@ -29,7 +29,7 @@ per-worktree port and database rule.
 
 ## Local development
 
-The Go version comes from `go.mod` (currently 1.26.10), so a toolchain that understands the
+The Go version comes from `go.mod` (currently 1.26.11), so a toolchain that understands the
 `go` directive is enough. Run the server from the checkout:
 
 ```console
