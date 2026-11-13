@@ -94,5 +94,4 @@ Report: the files changed on each side of the contract, the focused and full tes
 - `../../../docker-compose.yml` — the compose contract
 - `../../../.github/workflows/container.yml` — the CI smoke test
 - `../../../.github/workflows/release-container.yml` — the release publish workflow
-- `../issue-governance/SKILL.md` — when an issue is recommended and how it is labeled
 - `../go-tests/SKILL.md` — the Go test layers the machine check lives in

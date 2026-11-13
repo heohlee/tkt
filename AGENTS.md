@@ -17,10 +17,8 @@ Keep skills and this index current: when a new rule becomes authoritative, updat
 
 | Skill | Trigger | Path |
 | --- | --- | --- |
-| `issue-governance` | Starting a change; creating, labeling, or triaging issues | `.agents/skills/issue-governance/SKILL.md` |
-| `pr-governance` | Preparing, creating, or reviewing a pull request | `.agents/skills/pr-governance/SKILL.md` |
+| `git-workflow` | Before the first write of any change; issues, labels, branches, worktrees, or pull requests | `.agents/skills/git-workflow/SKILL.md` |
 | `design-system` | Templates, styling, layout, accessibility, or visible HTMX interactions | `.agents/skills/design-system/SKILL.md` |
-| `worktree-isolation` | Before the first write of any change | `.agents/skills/worktree-isolation/SKILL.md` |
 | `e2e-playwright` | Visible changes, critical journeys, browser-observable bugs, or E2E coverage | `.agents/skills/e2e-playwright/SKILL.md` |
 | `go-tests` | Go tests or tested packages, domain rules, authorization, migrations, golden fixtures, or Go CI gates | `.agents/skills/go-tests/SKILL.md` |
 | `container-governance` | Container image, compose, runtime contract, container CI, or image publishing | `.agents/skills/container-governance/SKILL.md` |
