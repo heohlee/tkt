@@ -1,4 +1,4 @@
-# IANA zone names from Go 1.26.10 lib/time/zoneinfo.zip
+# IANA zone names from Go 1.26.11 lib/time/zoneinfo.zip
 UTC
 Africa/Abidjan
 Africa/Accra

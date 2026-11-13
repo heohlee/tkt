@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 # Multi-stage build: CGO_ENABLED=0 (modernc sqlite is pure Go) into a
 # distroless static image (task 6.2).
-FROM golang:1.26.10 AS build
+FROM golang:1.26.11 AS build
 ARG VERSION=dev
 ARG REVISION=unknown
 WORKDIR /src
