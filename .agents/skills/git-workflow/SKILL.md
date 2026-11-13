@@ -13,7 +13,7 @@ Use before the first write of any tkt change (feature, bug, chore, docs or skill
 
 Do not use for read-only work: Q&A, reading, searching, inspecting history, running tests or building all leave the main checkout usable. Loading this skill does not authorize GitHub writes, pushing, opening a PR or merging.
 
-Generic PR, branch or issue instructions installed in your agent describe other repositories and do not apply here. They ask for shellcheck over `scripts/*.sh`, `type:refactor` and `type:breaking-change` labels, and PR-validation workflow checks; none of those exist in tkt. Follow this skill rather than importing checks from another repository, and do not reconcile the two.
+Generic PR, branch or issue instructions installed in your agent describe other repositories and do not apply here. They ask for shellcheck over `scripts/*.sh`, `type:refactor` and `type:breaking-change` labels, and PR-validation workflow checks; none of those exist in tkt. Follow this skill rather than importing checks from another repository, and do not try to reconcile those generic instructions with this skill: where they differ, this skill applies and the generic instructions are ignored.
 
 ## Hard Rules
 
@@ -118,9 +118,12 @@ These are the prefixes this repository uses; do not invent others. The issue num
 
 ### Required checks
 
-Branch protection on `main` requires `Go quality` (from `.github/workflows/quality.yml`, which requires every Go job to pass). The other workflows run on pull requests and their failures are fixed or explained, but they do not block merge:
+Branch protection on `main` requires one check: `Go quality`, from `.github/workflows/quality.yml`. That job passes only when every Go job in the workflow passes: Go lint (gofmt, go mod tidy, vet, build) and the sharded Go race jobs.
 
-- `.github/workflows/quality.yml`: Go lint (gofmt, go mod tidy, vet, build), the sharded Go race jobs, and the Go quality job that requires every Go job to pass
+### Other workflows
+
+These run on pull requests and their failures are fixed or explained, but they do not block merge:
+
 - `.github/workflows/coverage.yml`: minimum coverage threshold
 - `.github/workflows/security.yml`: staticcheck and govulncheck
 - `.github/workflows/e2e.yml`: frontend formatting and the Playwright suite

@@ -52,4 +52,4 @@ Report exact files changed, the screens, states, interactions and viewports chec
 - `../../../e2e/tests/helpers/htmx.ts`
 - `../../../e2e/tests/helpers/network.ts`
 - `../../../e2e/tests/helpers/navigation.ts`
-- `../engram-governance/SKILL.md` — behavioral artifact governance.
+- Engram behavioral artifacts are records scoped to `project: "tkt"`; find them with `mem_context` and `mem_search` by title, route, domain, issue, or change name.

@@ -19,8 +19,8 @@ Activate when the work touches:
 
 Do NOT activate for:
 
-- browser journeys, visual baselines, or HTMX evidence (that is `e2e-playwright`);
-- Engram artifact bookkeeping on its own (that is `engram-governance`);
+- browser journeys, visual baselines, or HTMX evidence (the Playwright suite under `e2e/` owns them);
+- Engram record bookkeeping on its own;
 - formatting, tooling, or infrastructure changes with no test-behavior impact.
 
 ## Layer Map
@@ -57,7 +57,7 @@ Five layers, each with a different reality. Identify the layer before touching i
 
 | Condition | Action |
 | --- | --- |
-| The behavior is a browser journey, a visual claim, or HTMX request provenance | Belongs to `e2e-playwright`. Do not duplicate it in Go |
+| The behavior is a browser journey, a visual claim, or HTMX request provenance | Belongs to the Playwright suite under `e2e/`. Do not duplicate it in Go |
 | The behavior is exhaustive authorization, domain edge cases, or workflow validation | Belongs here. The Playwright suite delegates it to this layer by name |
 | An equivalent lower-layer test already proves the behavior | Prefer the lower layer. Do not add a heavier test for the same confidence |
 | A store port already exposes the asserted fact | Use the port instead of `rawDB` |
@@ -89,5 +89,4 @@ Report: the layer and package touched, files changed, the focused and full comma
 - `../../../.github/workflows/quality.yml` — formatting, tidy, vet, build, and race
 - `../../../.github/workflows/coverage.yml` — the global 75.0 threshold
 - `../../../.github/workflows/security.yml` — staticcheck and govulncheck
-- `../e2e-playwright/SKILL.md` — the browser layer this one is the counterpart to
-- `../engram-governance/SKILL.md` — behavioral artifact governance
+- Behavioral requirements a Go test aligns against live in Engram records scoped to `project: "tkt"`; search them before changing a domain rule or authorization

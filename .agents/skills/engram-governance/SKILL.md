@@ -44,6 +44,5 @@ Return applicability, records consulted, changed files, exact validation evidenc
 
 ## References
 
-- `AGENTS.md`: skill registration and repository workflow.
-- `.agents/skills/e2e-playwright/SKILL.md`: browser regression requirements.
-- `.agents/skills/go-tests/SKILL.md`: Go test layer and its closing gates.
+- `e2e/README.md`: the browser suite. Validation evidence for a visible change includes the Playwright suite and a Playwright CLI check of the changed screen.
+- `.github/workflows/quality.yml`: the Go closing gates (formatting, tidy, vet, build, race) whose results Go validation evidence reports.

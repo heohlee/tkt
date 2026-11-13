@@ -160,4 +160,5 @@ Prefer earlier moves over later ones:
 - `web/templates/partials/styles.html` — the shared inline stylesheet and the token block.
 - `web/templates/static/users.css` — the second stylesheet, folded onto the same tokens.
 - `web/templates/static/ticket_metrics.css` — the metrics surface.
-- `../../engram-governance/SKILL.md` — behavioral artifact governance.
+- Behavioral requirements and design decisions live in Engram records scoped to
+  `project: "tkt"`; search them before assuming behavior.
